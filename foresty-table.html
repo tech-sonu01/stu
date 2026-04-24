@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Demo College - Uttarakhand Forestry & Horticulture</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Clean Card Layout (No Traditional Table) -->
+    <style>
+        .crop-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+        .crop-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(13, 110, 253, 0.15);
+        }
+        .crop-card .card-body {
+            padding: 24px;
+        }
+        .crop-card h5 {
+            font-size: 1.25rem;
+            margin-bottom: 18px;
+            color: #0d6efd;
+        }
+        .crop-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .crop-info div {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px dashed #dee2e6;
+        }
+        .crop-info div:last-child {
+            border-bottom: none;
+        }
+        .crop-info strong {
+            color: #495057;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+        .crop-image {
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+
+         .footer-bg-image {
+        background: linear-gradient(rgba(0, 30, 20, 0.85), rgba(0, 20, 15, 0.9)), url('https://images.pexels.com/photos/235725/pexels-photo-235725.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #f0f9f0;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    .footer-bg-image .text-primary {
+        color: #f1c152 !important;
+    }
+    .footer-bg-image a {
+        transition: all 0.3s ease;
+    }
+    .footer-bg-image a:not(.btn):hover {
+        color: #f1c152 !important;
+        transform: translateX(4px);
+        display: inline-block;
+    }
+    .footer-social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        transition: 0.3s;
+        margin-right: 8px;
+        color: white;
+        text-decoration: none;
+    }
+    .footer-social-icon:hover {
+        background: #f1c152;
+        transform: translateY(-3px);
+        color: #1e3a2f !important;
+    }
+    .footer-bg-image .border-secondary {
+        border-color: rgba(255, 255, 255, 0.2) !important;
+    }
+    .footer-bg-image .btn-primary {
+        background-color: #f1c152;
+        border-color: #f1c152;
+        color: #1e3a2f;
+        font-weight: 600;
+    }
+    .footer-bg-image .btn-primary:hover {
+        background-color: #d4a83a;
+        border-color: #d4a83a;
+        transform: translateY(-2px);
+    }
+    .btn-square {
+        border-radius: 12px !important;
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+ <div id="navbar"></div>
+
+    <!-- Hero Start with Sliding Carousel (Enhanced version) -->
+    <div class="container-fluid hero-header">
+        <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+    
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/nature-forest-trees-fog.jpeg" alt="Forest Landscape">
+                </div>
+                
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+               
+            </button>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="hero-header-inner animated zoomIn">
+                        <h1 class="display-1 text-dark">Uttarakhand <br> Forestry & <br> Horticulture</h1>
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="activity.html">Academics</a></li>
+                            <li class="breadcrumb-item text-dark" aria-current="page">Crop & Forest Data</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Horticulture - Fruit Crops -->
+    <div class="container-fluid activities py-5">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                <p class="fs-5 text-uppercase text-primary">HORTICULTURE – Uttarakhand</p>
+                <h1 class="section-title">1. Fruit Crops (फल फसलें)</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="card-body">
+                            <img src="img/a.webp" class="crop-image" alt="Apple">
+                            <h5>🍎 Apple</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Winter–Spring</span></div>
+                                <div><strong>Temp (°C)</strong><span>7 – 24</span></div>
+                                <div><strong>Humidity (%)</strong><span>60 – 75</span></div>
+                                <div><strong>Water (mm/week)</strong><span>25 – 40</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>6 – 8</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.2s">
+                        <div class="card-body">
+                            <img src="img/b.jpg" class="crop-image" alt="Peach">
+                            <h5>🍑 Peach</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Spring–Summer</span></div>
+                                <div><strong>Temp (°C)</strong><span>15 – 30</span></div>
+                                <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                <div><strong>Water (mm/week)</strong><span>20 – 30</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>7 – 9</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="card-body">
+                            <img src="img/c.webp" class="crop-image" alt="Plum">
+                            <h5>🍇 Plum</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Spring</span></div>
+                                <div><strong>Temp (°C)</strong><span>10 – 25</span></div>
+                                <div><strong>Humidity (%)</strong><span>60 – 80</span></div>
+                                <div><strong>Water (mm/week)</strong><span>25 – 35</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>6 – 8</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="card-body">
+                            <img src="img/d.jpg" class="crop-image" alt="Apricot">
+                            <h5>🍑 Apricot</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Spring</span></div>
+                                <div><strong>Temp (°C)</strong><span>12 – 28</span></div>
+                                <div><strong>Humidity (%)</strong><span>50 – 65</span></div>
+                                <div><strong>Water (mm/week)</strong><span>20 – 30</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>7 – 9</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="card-body">
+                            <img src="img/e.webp" class="crop-image" alt="Walnut">
+                            <h5>🌰 Walnut</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Summer</span></div>
+                                <div><strong>Temp (°C)</strong><span>15 – 30</span></div>
+                                <div><strong>Humidity (%)</strong><span>55 – 70</span></div>
+                                <div><strong>Water (mm/week)</strong><span>30 – 50</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>6 – 8</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="card-body">
+                            <img src="img/f.jpg" class="crop-image" alt="Kiwi">
+                            <h5>🥝 Kiwi</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Winter–Spring</span></div>
+                                <div><strong>Temp (°C)</strong><span>10 – 25</span></div>
+                                <div><strong>Humidity (%)</strong><span>70 – 85</span></div>
+                                <div><strong>Water (mm/week)</strong><span>35 – 50</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>5 – 7</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Horticulture - Floriculture -->
+    <div class="container-fluid activities py-5 bg-light">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="section-title">2. Floriculture (फूल)</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="card-body">
+                            <img src="img/g.jpg" class="crop-image" alt="Rose">
+                            <h5>🌹 Rose</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>All season</span></div>
+                                <div><strong>Temp (°C)</strong><span>15 – 28</span></div>
+                                <div><strong>Humidity (%)</strong><span>60 – 75</span></div>
+                                <div><strong>Water (mm/week)</strong><span>20 – 30</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>6 – 8</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.2s">
+                        <div class="card-body">
+                            <img src="img/h.webp" class="crop-image" alt="Marigold">
+                            <h5>🌼 Marigold</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Summer–Winter</span></div>
+                                <div><strong>Temp (°C)</strong><span>18 – 30</span></div>
+                                <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                <div><strong>Water (mm/week)</strong><span>15 – 25</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>7 – 9</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="card-body">
+                            <img src="img/i.jpg" class="crop-image" alt="Gladiolus">
+                            <h5>🌺 Gladiolus</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Winter</span></div>
+                                <div><strong>Temp (°C)</strong><span>10 – 25</span></div>
+                                <div><strong>Humidity (%)</strong><span>60 – 80</span></div>
+                                <div><strong>Water (mm/week)</strong><span>20 – 30</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>6 – 8</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="card-body">
+                            <img src="img/j.webp" class="crop-image" alt="Carnation">
+                            <h5>🌸 Carnation</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Winter–Spring</span></div>
+                                <div><strong>Temp (°C)</strong><span>10 – 22</span></div>
+                                <div><strong>Humidity (%)</strong><span>70 – 80</span></div>
+                                <div><strong>Water (mm/week)</strong><span>25 – 35</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>5 – 7</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="card-body">
+                            <img src="img/k.webp" class="crop-image" alt="Lily">
+                            <h5>🪻 Lily</h5>
+                            <div class="crop-info">
+                                <div><strong>Season</strong><span>Winter–Spring</span></div>
+                                <div><strong>Temp (°C)</strong><span>12 – 25</span></div>
+                                <div><strong>Humidity (%)</strong><span>65 – 80</span></div>
+                                <div><strong>Water (mm/week)</strong><span>25 – 35</span></div>
+                                <div><strong>Sunlight (hrs/day)</strong><span>5 – 7</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Horticulture - Vegetables & Spices/Medicinal (combined in two rows for clean layout) -->
+    <div class="container-fluid activities py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Vegetables -->
+                <div class="col-lg-6">
+                    <div class="mx-auto text-center mb-5 wow fadeIn" data-wow-delay="0.1s">
+                        <h1 class="section-title">3. Vegetable Crops (सब्जियाँ)</h1>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="card-body">
+                                    <img src="img/l.webp" class="crop-image" alt="Potato">
+                                    <h5>🥔 Potato</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>15 – 25</span></div>
+                                        <div><strong>Humidity (%)</strong><span>60 – 80</span></div>
+                                        <div><strong>Water</strong><span>30 – 40</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.2s">
+                                <div class="card-body">
+                                    <img src="img/m.webp" class="crop-image" alt="Tomato">
+                                    <h5>🍅 Tomato</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>All</span></div>
+                                        <div><strong>Temp (°C)</strong><span>18 – 30</span></div>
+                                        <div><strong>Humidity (%)</strong><span>60 – 75</span></div>
+                                        <div><strong>Water</strong><span>25 – 35</span></div>
+                                        <div><strong>Sunlight</strong><span>7 – 9</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="card-body">
+                                    <img src="img/n.jpg" class="crop-image" alt="Cabbage">
+                                    <h5>🥬 Cabbage</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>10 – 20</span></div>
+                                        <div><strong>Humidity (%)</strong><span>70 – 85</span></div>
+                                        <div><strong>Water</strong><span>30 – 40</span></div>
+                                        <div><strong>Sunlight</strong><span>5 – 7</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.4s">
+                                <div class="card-body">
+                                    <img src="img/o.jpg" class="crop-image" alt="Cauliflower">
+                                    <h5>🥦 Cauliflower</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>10 – 22</span></div>
+                                        <div><strong>Humidity (%)</strong><span>70 – 85</span></div>
+                                        <div><strong>Water</strong><span>30 – 45</span></div>
+                                        <div><strong>Sunlight</strong><span>5 – 7</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="card-body">
+                                    <img src="img/p.jpg" class="crop-image" alt="Peas">
+                                    <h5>🌱 Peas</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>10 – 25</span></div>
+                                        <div><strong>Humidity (%)</strong><span>60 – 80</span></div>
+                                        <div><strong>Water</strong><span>20 – 30</span></div>
+                                        <div><strong>Sunlight</strong><span>5 – 7</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.6s">
+                                <div class="card-body">
+                                    <img src="img/q.webp" class="crop-image" alt="Capsicum">
+                                    <h5>🌶️ Capsicum</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Summer</span></div>
+                                        <div><strong>Temp (°C)</strong><span>18 – 30</span></div>
+                                        <div><strong>Humidity (%)</strong><span>60 – 75</span></div>
+                                        <div><strong>Water</strong><span>25 – 35</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spices + Medicinal -->
+                <div class="col-lg-6">
+                    <div class="mx-auto text-center mb-5 wow fadeIn" data-wow-delay="0.1s">
+                        <h1 class="section-title">4. Spices + Medicinal Plants</h1>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="card-body">
+                                    <img src="img/r.webp" class="crop-image" alt="Ginger">
+                                    <h5>🌱 Ginger</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Monsoon</span></div>
+                                        <div><strong>Temp (°C)</strong><span>20 – 30</span></div>
+                                        <div><strong>Humidity (%)</strong><span>70 – 90</span></div>
+                                        <div><strong>Water</strong><span>40 – 60</span></div>
+                                        <div><strong>Sunlight</strong><span>4 – 6</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.2s">
+                                <div class="card-body">
+                                    <img src="img/s.jpg" class="crop-image" alt="Turmeric">
+                                    <h5>🌿 Turmeric</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Monsoon</span></div>
+                                        <div><strong>Temp (°C)</strong><span>20 – 35</span></div>
+                                        <div><strong>Humidity (%)</strong><span>70 – 90</span></div>
+                                        <div><strong>Water</strong><span>40 – 60</span></div>
+                                        <div><strong>Sunlight</strong><span>4 – 6</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="card-body">
+                                    <img src="img/t.jpg" class="crop-image" alt="Garlic">
+                                    <h5>🧄 Garlic</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>10 – 25</span></div>
+                                        <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                        <div><strong>Water</strong><span>20 – 30</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.4s">
+                                <div class="card-body">
+                                    <img src="img/u.jpg" class="crop-image" alt="Tulsi">
+                                    <h5>🌿 Tulsi</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Summer</span></div>
+                                        <div><strong>Temp (°C)</strong><span>20 – 35</span></div>
+                                        <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                        <div><strong>Water</strong><span>15 – 25</span></div>
+                                        <div><strong>Sunlight</strong><span>7 – 9</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="card-body">
+                                    <img src="img/v.jpg" class="crop-image" alt="Ashwagandha">
+                                    <h5>🌱 Ashwagandha</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>20 – 30</span></div>
+                                        <div><strong>Humidity (%)</strong><span>40 – 60</span></div>
+                                        <div><strong>Water</strong><span>10 – 20</span></div>
+                                        <div><strong>Sunlight</strong><span>7 – 9</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.6s">
+                                <div class="card-body">
+                                    <img src="img/w.jpg" class="crop-image" alt="Lemongrass">
+                                    <h5>🌾 Lemongrass</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>All</span></div>
+                                        <div><strong>Temp (°C)</strong><span>20 – 30</span></div>
+                                        <div><strong>Humidity (%)</strong><span>60 – 80</span></div>
+                                        <div><strong>Water</strong><span>30 – 50</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agriculture Section -->
+    <div class="container-fluid activities py-5 bg-light">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                <p class="fs-5 text-uppercase text-primary">AGRICULTURE – Uttarakhand</p>
+                <h1 class="section-title">Kharif &amp; Rabi Crops</h1>
+            </div>
+            <div class="row g-5">
+                <!-- Kharif -->
+                <div class="col-lg-6">
+                    <h4 class="text-center mb-4 text-primary">🌧️ 1. Kharif Crops (Monsoon)</h4>
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="card-body">
+                                    <img src="img/x.jpg" class="crop-image" alt="Rice">
+                                    <h5>🌾 Rice</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Monsoon</span></div>
+                                        <div><strong>Temp (°C)</strong><span>20 – 35</span></div>
+                                        <div><strong>Humidity (%)</strong><span>70 – 90</span></div>
+                                        <div><strong>Water</strong><span>50 – 100</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.2s">
+                                <div class="card-body">
+                                    <img src="img/y.jpg" class="crop-image" alt="Maize">
+                                    <h5>🌽 Maize</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Monsoon</span></div>
+                                        <div><strong>Temp (°C)</strong><span>18 – 30</span></div>
+                                        <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                        <div><strong>Water</strong><span>30 – 50</span></div>
+                                        <div><strong>Sunlight</strong><span>7 – 9</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="card-body">
+                                    <img src="img/z.jpg" class="crop-image" alt="Ragi">
+                                    <h5>🌾 Ragi</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Monsoon</span></div>
+                                        <div><strong>Temp (°C)</strong><span>20 – 30</span></div>
+                                        <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                        <div><strong>Water</strong><span>25 – 40</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.4s">
+                                <div class="card-body">
+                                    <img src="img/a1.jpg" class="crop-image" alt="Soybean">
+                                    <h5>🌱 Soybean</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Monsoon</span></div>
+                                        <div><strong>Temp (°C)</strong><span>20 – 30</span></div>
+                                        <div><strong>Humidity (%)</strong><span>60 – 80</span></div>
+                                        <div><strong>Water</strong><span>30 – 50</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="card-body">
+                                    <img src="img/a2.jpg" class="crop-image" alt="Sesame">
+                                    <h5>🌾 Sesame</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Monsoon</span></div>
+                                        <div><strong>Temp (°C)</strong><span>25 – 35</span></div>
+                                        <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                        <div><strong>Water</strong><span>20 – 30</span></div>
+                                        <div><strong>Sunlight</strong><span>7 – 9</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rabi -->
+                <div class="col-lg-6">
+                    <h4 class="text-center mb-4 text-primary">❄️ 2. Rabi Crops (Winter)</h4>
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="card-body">
+                                    <img src="img/a3.webp" class="crop-image" alt="Wheat">
+                                    <h5>🌾 Wheat</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>10 – 25</span></div>
+                                        <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                        <div><strong>Water</strong><span>30 – 50</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.2s">
+                                <div class="card-body">
+                                    <img src="img/a5.webp" class="crop-image" alt="Barley">
+                                    <h5>🌾 Barley</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>10 – 20</span></div>
+                                        <div><strong>Humidity (%)</strong><span>40 – 60</span></div>
+                                        <div><strong>Water</strong><span>20 – 40</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="card-body">
+                                    <img src="img/a6.jpg" class="crop-image" alt="Mustard">
+                                    <h5>🌼 Mustard</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>10 – 25</span></div>
+                                        <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                        <div><strong>Water</strong><span>20 – 30</span></div>
+                                        <div><strong>Sunlight</strong><span>7 – 9</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.4s">
+                                <div class="card-body">
+                                    <img src="img/a7.jpg" class="crop-image" alt="Lentil">
+                                    <h5>🌱 Lentil</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>10 – 25</span></div>
+                                        <div><strong>Humidity (%)</strong><span>40 – 60</span></div>
+                                        <div><strong>Water</strong><span>20 – 30</span></div>
+                                        <div><strong>Sunlight</strong><span>6 – 8</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="card-body">
+                                    <img src="img/a8.jpg" class="crop-image" alt="Gram">
+                                    <h5>🌿 Gram</h5>
+                                    <div class="crop-info">
+                                        <div><strong>Season</strong><span>Winter</span></div>
+                                        <div><strong>Temp (°C)</strong><span>15 – 30</span></div>
+                                        <div><strong>Humidity (%)</strong><span>40 – 60</span></div>
+                                        <div><strong>Water</strong><span>20 – 30</span></div>
+                                        <div><strong>Sunlight</strong><span>7 – 9</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forests Section -->
+    <div class="container-fluid activities py-5">
+        <div class="container py-5">
+            <div class="mx-auto text-center mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                <p class="fs-5 text-uppercase text-primary">FORESTS OF UTTARAKHAND</p>
+                <h1 class="section-title">Forest Types &amp; Climatic Data</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="card-body">
+                            <img src="img/b1.jpg" class="crop-image" alt="Tropical">
+                            <h5>🌴 Tropical</h5>
+                            <div class="crop-info">
+                                <div><strong>Trees</strong><span>Sal, Teak</span></div>
+                                <div><strong>Temp (°C)</strong><span>20 – 35</span></div>
+                                <div><strong>Humidity (%)</strong><span>70 – 90</span></div>
+                                <div><strong>Rainfall (mm/year)</strong><span>1000 – 2000</span></div>
+                                <div><strong>Sunlight</strong><span>High</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.2s">
+                        <div class="card-body">
+                            <img src="img/b2.jpg" class="crop-image" alt="Subtropical">
+                            <h5>🌲 Subtropical</h5>
+                            <div class="crop-info">
+                                <div><strong>Trees</strong><span>Chir Pine</span></div>
+                                <div><strong>Temp (°C)</strong><span>15 – 30</span></div>
+                                <div><strong>Humidity (%)</strong><span>50 – 70</span></div>
+                                <div><strong>Rainfall (mm/year)</strong><span>800 – 1500</span></div>
+                                <div><strong>Sunlight</strong><span>High</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="card-body">
+                            <img src="img/b3.jpg" class="crop-image" alt="Temperate">
+                            <h5>🌳 Temperate</h5>
+                            <div class="crop-info">
+                                <div><strong>Trees</strong><span>Oak, Deodar</span></div>
+                                <div><strong>Temp (°C)</strong><span>10 – 25</span></div>
+                                <div><strong>Humidity (%)</strong><span>60 – 80</span></div>
+                                <div><strong>Rainfall (mm/year)</strong><span>1000 – 2000</span></div>
+                                <div><strong>Sunlight</strong><span>Medium</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="card-body">
+                            <img src="img/b5.jpg" class="crop-image" alt="Sub-Alpine">
+                            <h5>🌲 Sub-Alpine</h5>
+                            <div class="crop-info">
+                                <div><strong>Trees</strong><span>Fir, Spruce</span></div>
+                                <div><strong>Temp (°C)</strong><span>5 – 20</span></div>
+                                <div><strong>Humidity (%)</strong><span>60 – 80</span></div>
+                                <div><strong>Rainfall (mm/year)</strong><span>800 – 1500</span></div>
+                                <div><strong>Sunlight</strong><span>Medium</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="crop-card activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="card-body">
+                            <img src="img/b6.jpg" class="crop-image" alt="Alpine">
+                            <h5>🏔️ Alpine</h5>
+                            <div class="crop-info">
+                                <div><strong>Trees</strong><span>Shrubs, Herbs</span></div>
+                                <div><strong>Temp (°C)</strong><span>0 – 15</span></div>
+                                <div><strong>Humidity (%)</strong><span>40 – 70</span></div>
+                                <div><strong>Rainfall (mm/year)</strong><span>500 – 1000</span></div>
+                                <div><strong>Sunlight</strong><span>Low–Medium</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                <p class="fs-5 text-uppercase text-primary">Testimonials</p>
+                <h1 class="display-3">What Our Students Say</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.1s">
+                <div class="testimonial-item">
+                    <div class="d-flex mb-3">
+                        <div class="position-relative">
+                            <img src="img/testimonial-1.jpg" class="img-fluid" alt="">
+                            <div class="btn-md-square bg-primary rounded-circle position-absolute" style="top: 25px; left: -25px;">
+                                <i class="fa fa-quote-left text-dark"></i>
+                            </div>
+                        </div>
+                        <div class="ps-3 my-auto">
+                            <h5 class="mb-0">Rahul Sharma</h5>
+                            <p class="m-0">B.Sc. Horticulture</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="d-flex">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        <p class="fs-5 m-0 pt-3">"The new card layout is so much easier to read than tables! I can quickly compare every crop’s requirements while studying for exams."</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="d-flex mb-3">
+                        <div class="position-relative">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="img-fluid" alt="">
+                            <div class="btn-md-square bg-primary rounded-circle position-absolute" style="top: 25px; left: -25px;">
+                                <i class="fa fa-quote-left text-dark"></i>
+                            </div>
+                        </div>
+                        <div class="ps-3 my-auto">
+                            <h5 class="mb-0">Priya Mehta</h5>
+                            <p class="m-0">M.Sc. Agriculture</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="d-flex">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        <p class="fs-5 m-0 pt-3">"I love the clean card design – no more scrolling horizontally on mobile. Perfect for quick revision of Uttarakhand crops and forests!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    
+    
+    <!-- Enhanced Footer with Background Image -->
+<div class="container-fluid footer-bg-image text-white pt-5 px-0">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-primary mb-4">Demo<span class="text-white">College</span></h4>
+                <p class="mb-3">Demo College is committed to fostering a dynamic and inclusive learning environment where students can thrive academically and personally. We prepare future leaders and innovators.</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social footer-social-icon" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social footer-social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social footer-social-icon" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social footer-social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Academic Programs</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right me-2"></i>Latest News</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h4 class="text-primary mb-4">Contact Info</h4>
+                <div class="d-flex mb-3">
+                    <i class="fas fa-map-marker-alt pt-1 me-3"></i>
+                    <span>123 College Ave, City, USA</span>
+                </div>
+                <div class="d-flex mb-3">
+                    <i class="fas fa-envelope pt-1 me-3"></i>
+                    <span>info@democollege.com</span>
+                </div>
+                <div class="d-flex mb-3">
+                    <i class="fas fa-phone-alt pt-1 me-3"></i>
+                    <span>+012 345 67890</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid copyright border-top border-secondary py-4" style="border-color: rgba(255,255,255,0.2) !important;">
+        <div class="container text-center">
+            <p class="mb-0 text-white">© 2025 Demo College. All Rights Reserved. Designed By <a href="https://htmlcodex.com" class="text-primary text-decoration-none">HTML Codex</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-light back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+     <script src="load.js"></script>
+</body>
+</html>

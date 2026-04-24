@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>UUHF - About | Uttarakhand University of Horticulture & Forestry</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords"
+        content="UUHF, Horticulture University, Forestry University, Bharsar, Uttarakhand, Agriculture University">
+    <meta name="description"
+        content="Uttarakhand University of Horticulture and Forestry (UUHF) is a premier institution dedicated to education, research, and extension in horticulture, forestry, and allied sciences.">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Footer Styles */
+        .footer-bg-image {
+            background: linear-gradient(rgba(0, 30, 20, 0.85), rgba(0, 20, 15, 0.9)), url('https://images.pexels.com/photos/235725/pexels-photo-235725.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #f0f9f0;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        .footer-bg-image .text-primary {
+            color: #f1c152 !important;
+        }
+
+        .footer-bg-image a {
+            transition: all 0.3s ease;
+        }
+
+        .footer-bg-image a:not(.btn):hover {
+            color: #f1c152 !important;
+            transform: translateX(4px);
+            display: inline-block;
+        }
+
+        .footer-social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            transition: 0.3s;
+            margin-right: 8px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-social-icon:hover {
+            background: #f1c152;
+            transform: translateY(-3px);
+            color: #1e3a2f !important;
+        }
+
+        .footer-bg-image .border-secondary {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .footer-bg-image .btn-primary {
+            background-color: #f1c152;
+            border-color: #f1c152;
+            color: #1e3a2f;
+            font-weight: 600;
+        }
+
+        .footer-bg-image .btn-primary:hover {
+            background-color: #d4a83a;
+            border-color: #d4a83a;
+            transform: translateY(-2px);
+        }
+
+        .btn-square {
+            border-radius: 12px !important;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 99;
+        }
+
+
+
+        /* ========== HOVER EFFECTS FOR ALL CARDS - SIRF YE CSS ADD KARO ========== */
+
+        /* About Images Hover */
+        .about .col-xl-6 .row.g-4 img {
+            transition: all 0.4s ease;
+            border-radius: 20px;
+        }
+
+        .about .col-xl-6 .row.g-4 img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Vision & Mission Cards Hover */
+        .about .row.g-4.mb-4 .col-md-6>div {
+            transition: all 0.4s ease;
+            border-radius: 12px;
+        }
+
+        .about .row.g-4.mb-4 .col-md-6>div:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            background: #f8f9fa;
+        }
+
+        .about .row.g-4.mb-4 .col-md-6>div:hover i {
+            transform: scale(1.1);
+            color: #f1c152 !important;
+        }
+
+        /* Info Card Hover (Background Light Card) */
+        .about .bg-light.p-3.mb-4 {
+            transition: all 0.4s ease;
+            border-radius: 12px;
+        }
+
+        .about .bg-light.p-3.mb-4:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Check List Items Hover */
+        .about .row.g-2 p {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .about .row.g-2 p:hover {
+            background: #f1c152;
+            color: #1e3a2f !important;
+            transform: translateX(5px);
+        }
+
+        .about .row.g-2 p:hover i {
+            color: #1e3a2f !important;
+        }
+
+        /* Stats Cards Hover (Milestones) */
+        .about .bg-primary.rounded.p-4 {
+            transition: all 0.4s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .about .bg-primary.rounded.p-4:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .about .bg-primary.rounded.p-4:hover i {
+            transform: scale(1.1);
+        }
+
+        /* CTA Button Hover */
+        .about .btn-primary,
+        .about .btn-light {
+            transition: all 0.3s ease;
+        }
+
+        .about .btn-primary:hover,
+        .about .btn-light:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Team Images Hover */
+        .team-img img {
+            transition: all 0.4s ease;
+        }
+
+        .team-img:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Team Item Cards Hover */
+        .team-item {
+            transition: all 0.4s ease;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .team-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-item img {
+            transition: transform 0.5s ease;
+        }
+
+        .team-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Bottom CTA Card Hover */
+        .about .container.text-center.bg-primary.py-5 {
+            transition: all 0.4s ease;
+            border-radius: 16px;
+        }
+
+        .about .container.text-center.bg-primary.py-5:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <div id="navbar"></div>
+
+    <!-- Hero Start -->
+    <div class="container-fluid hero-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="hero-header-inner animated zoomIn">
+                        <h1 class="display-1 text-dark">About UUHF</h1>
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-dark" aria-current="page">About University</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- About Start -->
+    <div class="container-fluid about py-5">
+        <div class="container py-5">
+            <div class="row g-5 mb-5">
+                <div class="col-xl-6">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <img src="img/research-centre-gaja-1-1.jpeg" class="img-fluid h-100 wow zoomIn"
+                                data-wow-delay="0.1s" alt="UUHF Campus Greens">
+                        </div>
+                        <div class="col-6">
+                            <img src="img/college-of-agriculture-chirbatiya.jpeg" class="img-fluid pb-3 wow zoomIn"
+                                data-wow-delay="0.1s" alt="Horticulture Research Block">
+                            <img src="img/college-of-horticulture-bharsar-500x324.jpeg" class="img-fluid pt-3 wow zoomIn"
+                                data-wow-delay="0.1s" alt="Forestry Nursery">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="fs-5 text-uppercase text-primary">Overview of UUHF</p>
+                    <h1 class="display-5 pb-4 m-0">Shaping Green Futures in Horticulture & Forestry</h1>
+                    <p class="pb-4">Established in 2011 by the Government of Uttarakhand (Act No. 8 of 2011), the
+                        Uttarakhand University of Horticulture and Forestry (UUHF) is a premier institution dedicated to
+                        excellence in agricultural sciences, with a specialized focus on horticulture, forestry, and
+                        allied disciplines. The university is headquartered at Bharsar, Pauri Garhwal, nestled in the
+                        scenic Himalayan foothills. UUHF was carved out of the historic G.B. Pant University of
+                        Agriculture & Technology to cater specifically to the unique agro-climatic and forestry needs of
+                        the Uttarakhand region. The university aims to foster sustainable natural resource management,
+                        biodiversity conservation, and rural prosperity through cutting-edge research and
+                        industry-relevant education.</p>
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="ps-3 d-flex align-items-center justify-content-start">
+                                <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i
+                                        class="fa fa-eye text-dark fa-4x mb-5 pb-2"></i></span>
+                                <div class="ms-4">
+                                    <h5>Our Vision</h5>
+                                    <p>To become a globally recognized center of excellence in horticulture and forestry
+                                        education, research, and extension, contributing to food security, ecological
+                                        balance, and sustainable livelihood development.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="ps-3 d-flex align-items-center justify-content-start">
+                                <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i
+                                        class="fa fa-flag text-dark fa-4x mb-5 pb-2"></i></span>
+                                <div class="ms-4">
+                                    <h5>Our Mission</h5>
+                                    <p>To produce highly skilled professionals; conduct need-based research in
+                                        horticulture, forestry, and allied sciences; promote technology transfer; and
+                                        conserve the rich Himalayan biodiversity through participatory approaches.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light p-3 mb-4">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-3">
+                                <img src="img/plac_1.jpg" class="img-fluid rounded-circle" alt="Student Activities">
+                            </div>
+                            <div class="col-6">
+                                <p class="mb-0">Recognized by UGC, ICAR, and accredited by NAAC with 'A' Grade, UUHF
+                                    offers a wide range of undergraduate, postgraduate, and doctoral programs. The
+                                    university has two constituent colleges: College of Horticulture (Bharsar) and
+                                    College of Forestry (Ranichauri), along with Krishi Vigyan Kendras (KVKs) and
+                                    research stations across the state.</p>
+                            </div>
+                            <div class="col-3">
+                                <h2 class="mb-0 text-primary text-center">₹6.8Cr</h2>
+                                <h5 class="mb-0 text-center">Research Grants</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <p class="mb-2"><i class="fa fa-check text-primary me-3"></i>B.Sc. (Hons) Horticulture &
+                                Forestry</p>
+                            <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>M.Sc. & Ph.D. in Fruit Science,
+                                Vegetable Science, Agroforestry</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="mb-2"><i class="fa fa-check text-primary me-3"></i>ICAR-accredited curriculum &
+                                research stations</p>
+                            <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>State-of-the-art labs, herbal
+                                garden, and arboretum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Summary & Milestones -->
+            <div class="row g-5 mb-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.2s">
+                    <h2 class="display-6">At a Glance: Institutional Legacy</h2>
+                    <p class="mt-3">UUHF functions with a mandate to advance horticulture and forestry sectors through
+                        academic rigor and field-level extension. The university has significantly contributed to the
+                        development of high-yielding varieties of mandarin, pear, and medicinal plants adapted to the
+                        Himalayan region. With sprawling experimental farms, a modern tissue culture facility, and a
+                        central library housing over 25,000 volumes, the campus provides an invigorating atmosphere for
+                        learning. The university also hosts the Centre for Himalayan Biodiversity and Climate Change
+                        Studies, which collaborates with national and international agencies.</p>
+                    <p>Moreover, UUHF has signed MoUs with several ICAR institutes, Forest Research Institute (FRI), and
+                        international universities to foster student exchange and joint research. The university's
+                        placement cell ensures that graduates are recruited by leading horticulture industries, banking
+                        sectors, and state forest departments. More than 2,000 alumni are currently serving as
+                        scientists, entrepreneurs, and policymakers across the country.</p>
+                    <a href="#" class="btn btn-primary py-2 px-4 mt-2">Explore Academic Programs</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4 text-center">
+                        <div class="col-6">
+                            <div class="bg-primary rounded p-4">
+                                <i class="fa fa-university fa-3x text-white"></i>
+                                <h2 class="text-white mt-2">2</h2>
+                                <p class="text-white mb-0">Constituent Colleges</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-primary rounded p-4">
+                                <i class="fa fa-leaf fa-3x text-white"></i>
+                                <h2 class="text-white mt-2">450+</h2>
+                                <p class="text-white mb-0">Acres of Campus</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mt-4">
+                            <div class="bg-primary rounded p-4">
+                                <i class="fa fa-chalkboard-user fa-3x text-white"></i>
+                                <h2 class="text-white mt-2">120+</h2>
+                                <p class="text-white mb-0">Expert Faculty</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mt-4">
+                            <div class="bg-primary rounded p-4">
+                                <i class="fa fa-graduation-cap fa-3x text-white"></i>
+                                <h2 class="text-white mt-2">1800+</h2>
+                                <p class="text-white mb-0">Active Students</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container text-center bg-primary py-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-2">
+                        <i class="fa fa-tree fa-5x text-white"></i>
+                    </div>
+                    <div class="col-lg-7 text-center text-lg-start">
+                        <h1 class="mb-0">Cultivating Leaders in Horticulture & Forestry for a Sustainable Himalayan
+                            Future</h1>
+                    </div>
+                    <div class="col-lg-3">
+                        <a href="#" class="btn btn-light py-2 px-4">Admission 2025-26</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Leadership Section Start -->
+    <div class="container-fluid team py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
+                <p class="fs-5 text-uppercase text-primary">University Leadership</p>
+                <h1 class="display-3">Meet Our Visionary Administrators</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-xl-5">
+                    <div class="team-img wow zoomIn" data-wow-delay="0.1s">
+                        <img src="img/tea_1.png" class="img-fluid" alt="Vice Chancellor Profile">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-xl-7">
+                    <div class="team-item wow fadeIn" data-wow-delay="0.1s">
+                        <h1>Prof. (Dr.) Anil Kumar Shukla</h1>
+                        <h5 class="fw-normal fst-italic text-primary mb-4">Vice Chancellor, UUHF</h5>
+                        <p class="mb-4">Dr. Anil Kumar Shukla is a distinguished academician with over 30 years of
+                            experience in horticulture research and higher education administration. Under his visionary
+                            leadership, UUHF has strengthened its research output, forged international collaborations,
+                            and implemented outcome-based education models. He has been instrumental in launching the
+                            'Himalayan Horticulture Innovation Hub' and expanding scholarship programs for meritorious
+                            students from rural backgrounds. His areas of expertise include fruit science, post-harvest
+                            management, and policy planning for sustainable mountain agriculture.</p>
+                        <div class="team-icon d-flex pb-4 mb-4 border-bottom border-primary">
+                            <a class="btn btn-primary btn-lg-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-lg-square me-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-primary btn-lg-square me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="btn btn-primary btn-lg-square"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="team-item wow zoomIn" data-wow-delay="0.2s">
+                                <img src="img/Dr. Meera R Pande.webp" alt="Dr. Meera R. Pande"
+                                    class="img-fluid w-100" alt="Indian Female Doctor"
+                                    style="height:100%; border-radius: 10%;">
+                                <div class="team-content text-dark text-center py-3">
+                                    <div class="team-content-inner">
+                                        <h5 class="mb-0">Dr. Meera R. Pande</h5>
+                                        <p class="text-dark">Dean, College of Horticulture</p>
+                                        <div class="team-icon d-flex align-items-center justify-content-center">
+                                            <a class="btn btn-primary btn-sm-square me-2" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-primary btn-sm-square me-2" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a href="#" class="btn btn-primary btn-sm-square me-2"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a href="#" class="btn btn-primary btn-sm-square"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-item wow zoomIn" data-wow-delay="0.4s">
+                                <img src="img/Dr. B.P. Chamola.webp" alt="Dr. B.P. Chamola"
+                                    class="img-fluid w-100" alt="Indian Male Doctor" style="border-radius: 10%;">
+                                <div class="team-content text-dark text-center py-3">
+                                    <div class="team-content-inner">
+                                        <h5 class="mb-0">Dr. B.P. Chamola</h5>
+                                        <p class="text-dark">Dean, College of Forestry</p>
+                                        <div class="team-icon d-flex align-items-center justify-content-center">
+                                            <a class="btn btn-primary btn-sm-square me-2" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-primary btn-sm-square me-2" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a href="#" class="btn btn-primary btn-sm-square me-2"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a href="#" class="btn btn-primary btn-sm-square"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="team-item wow zoomIn" data-wow-delay="0.6s">
+                                <img src="img/tea_6.png" class="img-fluid w-100" alt="Registrar"
+                                    style="border-radius: 10%;">
+                                <div class="team-content text-dark text-center py-3">
+                                    <div class="team-content-inner">
+                                        <h5 class="mb-0">Dr. Rajendra Dobhal</h5>
+                                        <p class="text-dark">Registrar & Controller of Exams</p>
+                                        <div class="team-icon d-flex align-items-center justify-content-center">
+                                            <a class="btn btn-primary btn-sm-square me-2" href="#"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-primary btn-sm-square me-2" href="#"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a href="#" class="btn btn-primary btn-sm-square me-2"><i
+                                                    class="fab fa-instagram"></i></a>
+                                            <a href="#" class="btn btn-primary btn-sm-square"><i
+                                                    class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Leadership End -->
+
+    <!-- Enhanced Footer with Background Image -->
+    <div class="container-fluid footer-bg-image text-white pt-5 px-0">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-primary mb-4">Uttarakhand University of Horticulture & Forestry</h4>
+                    <p class="mb-3">Empowering Himalayan communities through excellence in horticulture, forestry, and
+                        allied sciences since 2011.</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social footer-social-icon" href="#"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social footer-social-icon" href="#"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social footer-social-icon" href="#"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social footer-social-icon" href="#"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-primary mb-4">Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Academic Programs</a>
+                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right me-2"></i>Research</a>
+                        <a class="text-white" href="#"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-primary mb-4">Contact Info</h4>
+                    <div class="d-flex mb-3">
+                        <i class="fas fa-map-marker-alt pt-1 me-3"></i>
+                        <span>Bharsar, Pauri Garhwal, Uttarakhand - 246123, India</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <i class="fas fa-envelope pt-1 me-3"></i>
+                        <span>registrar@uuhf.ac.in</span>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <i class="fas fa-phone-alt pt-1 me-3"></i>
+                        <span>+91-1368-123456</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright border-top border-secondary py-4"
+            style="border-color: rgba(255,255,255,0.2) !important;">
+            <div class="container text-center">
+                <p class="mb-0 text-white">© 2025 Uttarakhand University of Horticulture & Forestry. All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-3 border-light back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="load.js"></script>
+</body>
+
+</html>
